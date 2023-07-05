@@ -1,3 +1,5 @@
+"use client"
+
 import { cn } from '@/lib/utils';
 import * as React from 'react'
 
@@ -7,10 +9,12 @@ interface GridViewProps {
 }
 
 const GridView: React.FC<GridViewProps> = ({children, className}) => {
+
     return (
-        <section className={cn("p-10 w-1/2", className)}>
-            {children}
-        </section>
+                    <div className='outline-dashed outline-2 rounded-lg w-auto h-full aspect-A4'>
+                        {children}
+                    </div>
+            
     );
 }
 

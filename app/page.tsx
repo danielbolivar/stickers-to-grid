@@ -1,29 +1,28 @@
+
 import { GridView } from '@/components/ui/gridview'
-import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
+import { Card, CardDescription, CardTitle } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row flex-auto h-screen p-5 gap-3 items-stretch">
-      <section className='grow-[2] p-5 flex'>
-        <Card className='flex-grow p-5'>
+    <main className="flex flex-col md:flex-row h-screen p-5 gap-3 items-stretch relative">
+
+        <Card className='grow-[2] p-5 flex flex-col relative self-stretch'>
           <CardTitle>Stickers to Grid</CardTitle>
-          <CardDescription>Drop here the items you want to add to your sticker grid!</CardDescription>
-          <CardContent>
-            <GridView></GridView>
-          </CardContent>
+          <CardDescription className='invisible md:visible'>Drop here the items you want to add to your sticker grid!</CardDescription>
+          <Separator className="my-4 invisible md:visible"></Separator>
+          
+          <GridView className='absolute flex-1 self-stretch'></GridView>
+          
         
         </Card>
-      </section>
 
-      <section className='flex-grow p-5 flex'>
-        <Card className='flex-grow p-5'>
+
+        <Card className='flex-grow p-6 flex flex-col visible'>
           <CardTitle>Pick your stickers</CardTitle>
-          <CardDescription>Drag here the items you want to add to your sticker grid!</CardDescription>
-          <CardContent>
-
-          </CardContent>
+          <CardDescription className='invisible md:visible'>Drag here the items you want to add to your sticker grid!</CardDescription>
+          <Separator className="my-4 invisible md:visible"></Separator>
         </Card>
-      </section>
     </main>
   )
 }
