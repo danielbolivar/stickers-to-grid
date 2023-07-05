@@ -2,6 +2,7 @@
 import { GridView } from '@/components/ui/gridview'
 import { Card, CardDescription, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -18,11 +19,15 @@ export default function Home() {
         </Card>
 
 
-        <Card className='flex-grow p-6 flex flex-col visible'>
-          <CardTitle>Pick your stickers</CardTitle>
-          <CardDescription className='invisible md:visible'>Drag here the items you want to add to your sticker grid!</CardDescription>
-          <Separator className="my-4 invisible md:visible"></Separator>
-        </Card>
+        <div className='flex-grow flex flex-col gap-5'>        
+          <Card className='flex-grow p-6 flex flex-col'>
+            <CardTitle>Pick your stickers</CardTitle>
+            <CardDescription className='invisible md:visible'>Drag here the items you want to add to your sticker grid!</CardDescription>
+            <Separator className="my-4 invisible md:visible"></Separator>
+          </Card>
+          <Button>Export stickers</Button>
+        </div>
+
     </main>
   )
 }
