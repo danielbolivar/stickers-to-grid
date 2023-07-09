@@ -11,7 +11,7 @@ interface GridViewProps {
 const GridView: React.FC<GridViewProps> = ({children, className}) => {
 
     return (
-                    <div className='outline-dashed outline-2 rounded-lg w-auto h-full aspect-A4'>
+                    <div className={cn('outline-dashed outline-2 rounded-lg w-auto h-full aspect-A4', className)}>
                         {children}
                     </div>
             
